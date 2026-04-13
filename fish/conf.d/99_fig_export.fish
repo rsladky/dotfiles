@@ -1,0 +1,1 @@
+/Users/robinsladky/fig-export/dotfiles/dotfile.fish

@@ -1,0 +1,53 @@
+# skhd config - AeroSpace bindings via left Alt only
+# Right Alt (AltGr) remains free for AZERTY special characters
+
+# Focus window
+lalt - h : /opt/homebrew/bin/aerospace focus left
+lalt - j : /opt/homebrew/bin/aerospace focus down
+lalt - k : /opt/homebrew/bin/aerospace focus up
+lalt - l : /opt/homebrew/bin/aerospace focus right
+
+# Move window
+lalt + shift - h : /opt/homebrew/bin/aerospace move left
+lalt + shift - j : /opt/homebrew/bin/aerospace move down
+lalt + shift - k : /opt/homebrew/bin/aerospace move up
+lalt + shift - l : /opt/homebrew/bin/aerospace move right
+
+# Workspaces (hex keycodes for AZERTY layout-independence)
+lalt - 0x12 : /opt/homebrew/bin/aerospace workspace 1
+lalt - 0x13 : /opt/homebrew/bin/aerospace workspace 2
+lalt - 0x14 : /opt/homebrew/bin/aerospace workspace 3
+lalt - 0x15 : /opt/homebrew/bin/aerospace workspace 4
+lalt - 0x17 : /opt/homebrew/bin/aerospace workspace 5
+lalt - 0x16 : /opt/homebrew/bin/aerospace workspace 6
+lalt - 0x1A : /opt/homebrew/bin/aerospace workspace 7
+lalt - 0x1C : /opt/homebrew/bin/aerospace workspace 8
+lalt - 0x19 : /opt/homebrew/bin/aerospace workspace 9
+
+# Move window to workspace
+lalt + shift - 0x12 : /opt/homebrew/bin/aerospace move-node-to-workspace 1
+lalt + shift - 0x13 : /opt/homebrew/bin/aerospace move-node-to-workspace 2
+lalt + shift - 0x14 : /opt/homebrew/bin/aerospace move-node-to-workspace 3
+lalt + shift - 0x15 : /opt/homebrew/bin/aerospace move-node-to-workspace 4
+lalt + shift - 0x17 : /opt/homebrew/bin/aerospace move-node-to-workspace 5
+lalt + shift - 0x16 : /opt/homebrew/bin/aerospace move-node-to-workspace 6
+lalt + shift - 0x1A : /opt/homebrew/bin/aerospace move-node-to-workspace 7
+lalt + shift - 0x1C : /opt/homebrew/bin/aerospace move-node-to-workspace 8
+lalt + shift - 0x19 : /opt/homebrew/bin/aerospace move-node-to-workspace 9
+
+# Layout
+lalt - f : /opt/homebrew/bin/aerospace fullscreen
+lalt - e : /opt/homebrew/bin/aerospace layout tiles horizontal vertical
+lalt + shift - space : /opt/homebrew/bin/aerospace layout floating tiling
+
+# Open Ghostty
+lalt - return : open -n /Applications/Ghostty.app
+
+# Close window
+lalt + shift - q : /opt/homebrew/bin/aerospace close
+
+# Reload AeroSpace config
+lalt + shift - r : /opt/homebrew/bin/aerospace reload-config
+
+# Enter resize mode
+lalt - r : /opt/homebrew/bin/aerospace mode resize
