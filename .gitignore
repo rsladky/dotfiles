@@ -1,2 +1,5 @@
 gh/
 opencode/node_modules/
+.DS_Store
+zed/prompts/
+ghc/
