@@ -22,7 +22,7 @@ return {
 
 		harpoon:extend({
 			UI_CREATE = function(cx)
-				local width = 45
+				local width = 65
 				local height = 10
 				local row = math.floor((vim.o.lines - height) / 2)
 				local col = math.floor((vim.o.columns - width) / 2)
