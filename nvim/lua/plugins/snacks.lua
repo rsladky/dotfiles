@@ -93,8 +93,8 @@ return {
 					keys = {
 						-- ["È"] = { "list_up", mode = { "i", "n" } },
 						-- ["Ï"] = { "list_down", mode = { "i", "n" } },
-						["K"] = { "list_up", mode = { "i", "n" } },
-						["J"] = { "list_down", mode = { "i", "n" } },
+						-- ["K"] = { "list_up", mode = { "i", "n" } },
+						-- ["J"] = { "list_down", mode = { "i", "n" } },
 						-- ["<C-k>"] = { "list_up", mode = { "i", "n" } },
 						-- ["<C-j>"] = { "list_down", mode = { "i", "n" } },
 						-- ["<D-k>"] = { "list_up", mode = { "i", "n" } },

@@ -19,33 +19,33 @@ macos-titlebar-style = hidden
 window-padding-x = 6
 window-padding-y = 6
 
-# Colors (Vesper)
-background = #101010
-foreground = #cccccc
-cursor-color = #cccccc
+# Colors (Cendre)
+background = #000000
+foreground = #ffffff
+cursor-color = #ffffff
 
 # ANSI 0-7
-palette = 0=#101010
-palette = 1=#ff8080
-palette = 2=#82d9c2
+palette = 0=#000000
+palette = 1=#ff6666
+palette = 2=#888888
 palette = 3=#ffc799
-palette = 4=#65737e
-palette = 5=#ffcfa8
-palette = 6=#99ffe4
+palette = 4=#555555
+palette = 5=#c8c8c8
+palette = 6=#888888
 palette = 7=#cccccc
 
 # ANSI 8-15 (bright)
-palette = 8=#343434
-palette = 9=#ff8080
-palette = 10=#99ffe4
+palette = 8=#333333
+palette = 9=#ff6666
+palette = 10=#c8c8c8
 palette = 11=#ffc799
-palette = 12=#65737e
-palette = 13=#ffcfa8
-palette = 14=#99ffe4
+palette = 12=#888888
+palette = 13=#c8c8c8
+palette = 14=#888888
 palette = 15=#ffffff
 
 # Selection
-selection-background = #343434
+selection-background = #222222
 selection-foreground = #ffffff
 
 # Remap Cmd+A to send Alt+A (so tmux sees it as M-a prefix)

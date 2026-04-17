@@ -24,16 +24,16 @@ return {
 		statusline.setup({ use_icons = vim.g.have_nerd_font })
 
 		-- Mode highlight overrides: colored background instead of colored text
-		vim.api.nvim_set_hl(0, "MiniStatuslineModeInsert",  { bg = "#FFCFA8", fg = "#101010", bold = true })
-		vim.api.nvim_set_hl(0, "MiniStatuslineModeVisual",  { bg = "#99FFE4", fg = "#101010", bold = true })
-		vim.api.nvim_set_hl(0, "MiniStatuslineModeNormal",  { bg = "#ffffff", fg = "#101010", bold = true })
+		vim.api.nvim_set_hl(0, "MiniStatuslineModeInsert", { bg = "#FF8080", fg = "#101010", bold = true })
+		vim.api.nvim_set_hl(0, "MiniStatuslineModeVisual", { bg = "#FFCFA8", fg = "#101010", bold = true })
+		vim.api.nvim_set_hl(0, "MiniStatuslineModeNormal", { bg = "#ffffff", fg = "#101010", bold = true })
 		vim.api.nvim_set_hl(0, "MiniStatuslineModeReplace", { bg = "#FF8080", fg = "#101010", bold = true })
-		vim.api.nvim_set_hl(0, "MiniStatuslineModeCommand", { bg = "#FFCFA8", fg = "#101010", bold = true })
-		vim.api.nvim_set_hl(0, "MiniStatuslineModeOther",   { bg = "#ffffff", fg = "#101010", bold = true })
+		vim.api.nvim_set_hl(0, "MiniStatuslineModeCommand", { bg = "#888888", fg = "#101010", bold = true })
+		vim.api.nvim_set_hl(0, "MiniStatuslineModeOther", { bg = "#ffffff", fg = "#101010", bold = true })
 
 		-- Black bar background, white filename (full path)
 		vim.api.nvim_set_hl(0, "MiniStatuslineFilename", { bg = "#101010", fg = "#ffffff" })
-		vim.api.nvim_set_hl(0, "MiniStatuslineDevinfo",  { bg = "#101010", fg = "#888888" })
+		vim.api.nvim_set_hl(0, "MiniStatuslineDevinfo", { bg = "#101010", fg = "#888888" })
 		vim.api.nvim_set_hl(0, "MiniStatuslineFileinfo", { bg = "#101010", fg = "#888888" })
 		vim.api.nvim_set_hl(0, "MiniStatuslineInactive", { bg = "#101010", fg = "#555555" })
 
@@ -47,9 +47,13 @@ return {
 
 		---@diagnostic disable-next-line: duplicate-set-field
 		statusline.section_filename = function()
-			local path = vim.fn.expand("%:~:.")  -- relative to ~ or cwd
-			if path == "" then return "[No Name]" end
-			if vim.bo.modified then path = path .. " [+]" end
+			local path = vim.fn.expand("%:~:.") -- relative to ~ or cwd
+			if path == "" then
+				return "[No Name]"
+			end
+			if vim.bo.modified then
+				path = path .. " [+]"
+			end
 			return path
 		end
 

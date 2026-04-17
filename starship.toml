@@ -1,12 +1,12 @@
-# Starship config - minimal, Vesper-inspired
+# Starship config - cendre theme
 
 format = """
 $directory$git_branch$git_status$conda$nodejs$python$rust$golang $fill$cmd_duration$time
 $character"""
 
 [character]
-success_symbol = "[❯](bold #ff8080)"
-error_symbol   = "[❯](bold #ff8080)"
+success_symbol = "[❯](bold #ff6666)"
+error_symbol   = "[❯](bold #ff6666)"
 
 [directory]
 style           = "bold #ffc799"
@@ -15,11 +15,11 @@ truncate_to_repo = true
 
 [git_branch]
 symbol = " "
-style  = "#65737e"
+style  = "#888888"
 format = "[$symbol$branch]($style) "
 
 [git_status]
-style    = "#ff8080"
+style    = "#ff6666"
 format   = "([$all_status$ahead_behind]($style) )"
 ahead    = "⇡${count}"
 behind   = "⇣${count}"
@@ -30,38 +30,38 @@ untracked = "?${count}"
 deleted  = "✘${count}"
 
 [conda]
-style  = "#82d9c2"
+style  = "#c8c8c8"
 format = "[$symbol$environment]($style) "
 symbol = " "
 
 [nodejs]
-style  = "#82d9c2"
+style  = "#c8c8c8"
 format = "[$symbol($version)]($style) "
 symbol = " "
 
 [python]
-style  = "#82d9c2"
+style  = "#c8c8c8"
 format = "[$symbol($version)]($style) "
 symbol = " "
 
 [rust]
-style  = "#ffcfa8"
+style  = "#c8c8c8"
 format = "[$symbol($version)]($style) "
 symbol = " "
 
 [golang]
-style  = "#82d9c2"
+style  = "#c8c8c8"
 format = "[$symbol($version)]($style) "
 symbol = " "
 
 [cmd_duration]
 min_time = 2000
-style    = "#505050"
+style    = "#555555"
 format   = "[$duration]($style) "
 
 [time]
 disabled  = false
-style     = "#505050"
+style     = "#555555"
 format    = "[$time]($style)"
 time_format = "%H:%M"
 
