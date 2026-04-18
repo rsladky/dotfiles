@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+
+export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:$PATH"
+exec 2>>"$HOME/.cache/tmux-harpoon.log"
+
+TMUX_BIN=$(command -v tmux)
+
+LIST_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/tmux-harpoon"
+LIST_FILE="$LIST_DIR/list"
+
+mkdir -p "$LIST_DIR"
+[[ -f "$LIST_FILE" ]] || touch "$LIST_FILE"
+
+_jump_name() {
+    local name="$1"
+    local path
+    path=$(grep -m1 "^${name}	" "$LIST_FILE" | cut -f2)
+
+    if "$TMUX_BIN" has-session -t="$name" 2>/dev/null; then
+        "$TMUX_BIN" switch-client -t "$name"
+    elif [[ -n $path ]]; then
+        "$TMUX_BIN" new-session -ds "$name" -c "$path"
+        "$TMUX_BIN" switch-client -t "$name"
+    fi
+}
+
+case "$1" in
+    add)
+        name=$("$TMUX_BIN" display -p '#S')
+        path=$("$TMUX_BIN" display -p '#{pane_current_path}')
+        if grep -qm1 "^${name}	" "$LIST_FILE" 2>/dev/null; then
+            "$TMUX_BIN" display-message "harpoon: already pinned"
+        else
+            printf '%s\t%s\n' "$name" "$path" >> "$LIST_FILE"
+            "$TMUX_BIN" display-message "harpoon: pinned $name"
+        fi
+        ;;
+
+    jump)
+        n="$2"
+        line=$(sed -n "${n}p" "$LIST_FILE")
+        [[ -z $line ]] && exit 0
+        name=$(printf '%s' "$line" | cut -f1)
+        _jump_name "$name"
+        ;;
+
+    jump-name)
+        _jump_name "$2"
+        ;;
+
+    menu)
+        sel=$(mktemp)
+        trap 'rm -f "$sel"' EXIT
+
+        nvim "$LIST_FILE" \
+            -c "nnoremap <buffer><silent> <CR> :call writefile([matchstr(getline('.'),'^[^\t]*')],'$sel')<Bar>wq<CR>" \
+            -c "nnoremap <buffer><silent> q :q<CR>" \
+            -c "setlocal nobuflisted conceallevel=0 number norelativenumber" \
+            -c "syntax off"
+
+        if [[ -s $sel ]]; then
+            _jump_name "$(head -1 "$sel")"
+        fi
+        ;;
+esac
+
+exit 0

@@ -50,6 +50,21 @@ Cmd keys are remapped to Meta sequences so tmux receives them without a prefix.
 | `Ctrl+v` | rectangle selection |
 | `Escape` | cancel |
 
+### Session harpoon
+| Key | Action |
+|-----|--------|
+| `prefix + a` | pin current session (saves name + working dir) |
+| `prefix + e` | open harpoon menu (nvim buffer) |
+| `prefix + 1..0` | jump to pin 1–10 (recreates session if gone) |
+
+Inside the menu: edit freely with vim motions — `dd` to remove, `ddp` to reorder, `:w` to save, `<CR>` on a line to jump to that session.
+
+### Sessions
+| Key | Action |
+|-----|--------|
+| `prefix + F` | new session from directory picker (fzf) |
+| `prefix + f` | switch to existing session (fzf) |
+
 ---
 
 ## Neovim

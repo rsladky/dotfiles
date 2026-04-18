@@ -88,7 +88,7 @@ vim.keymap.set({ "n", "v" }, "ù", "%", opts)
 
 -- Keep last yanked
 vim.keymap.set("v", "p", '"_dP', opts)
-vim.keymap.set("n", "dd", '"_dd', opts)
+-- vim.keymap.set("n", "dd", '"_dd', opts)
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", function()

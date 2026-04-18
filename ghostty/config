@@ -56,6 +56,7 @@ keybind = cmd+d=text:\x1bd
 keybind = cmd+shift+d=text:\x1bD
 keybind = cmd+t=text:\x1bt
 keybind = cmd+w=text:\x1bw
+keybind = cmd+j=text:\x1bj
 keybind = cmd+k=text:\x1bk
 keybind = cmd+shift+[=unbind
 keybind = cmd+shift+]=unbind

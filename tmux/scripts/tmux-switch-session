@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:$PATH"
-session=$(tmux list-sessions -F '#S' | sort | sed -n "${1}p")
-if [[ -n $session ]]; then
-    tmux switch-client -t "$session"
-fi

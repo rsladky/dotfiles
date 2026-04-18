@@ -1,10 +1,10 @@
--- cendre.lua — high contrast dark theme: coral + peach on pure black
+-- forest.lua — forest green theme
 
 vim.cmd("highlight clear")
 if vim.fn.exists("syntax_on") then
 	vim.cmd("syntax reset")
 end
-vim.g.colors_name = "cendre"
+vim.g.colors_name = "forest"
 vim.o.background = "dark"
 
 local c = {
@@ -18,11 +18,11 @@ local c = {
 	fg3 = "#888888",
 	fg4 = "#444444",
 
-	coral = "#ff6666",
-	peach = "#ffc799",
-	light = "#888888",
-	mid = "#666666",
-	dark = "#555555",
+	coral = "#2a6e29",
+	peach = "#8ecf8d",
+	light = "#b4d4a8",
+	mid = "#c7c7c7",
+	dark = "#b1b1b1",
 }
 
 local function hi(group, opts)
@@ -74,8 +74,7 @@ hi("PmenuExtra", { fg = c.fg3, bg = c.bg1 })
 
 hi("WildMenu", { fg = c.fg, bg = c.bg3 })
 hi("QuickFixLine", { bg = c.bg2 })
-hi("Directory", { fg = c.fg })
-hi("SnacksExplorerDir", { fg = c.fg })
+hi("Directory", { fg = c.mid })
 hi("Title", { fg = c.peach, bold = true })
 hi("Question", { fg = c.light })
 hi("MoreMsg", { fg = c.light })
@@ -245,10 +244,10 @@ hi("GitSignsChangeNr", { fg = c.peach })
 hi("GitSignsDeleteNr", { fg = c.coral })
 
 -- ── Diff ────────────────────────────────────────────────────────────────────
-hi("DiffAdd", { fg = c.light, bg = "#111111" })
-hi("DiffChange", { fg = c.peach, bg = "#1a1000" })
-hi("DiffDelete", { fg = c.coral, bg = "#1a0000" })
-hi("DiffText", { fg = c.light, bg = "#2a1a00" })
+hi("DiffAdd", { fg = c.light, bg = "#021202" })
+hi("DiffChange", { fg = c.peach, bg = "#061a05" })
+hi("DiffDelete", { fg = c.coral, bg = "#0a1a08" })
+hi("DiffText", { fg = c.light, bg = "#143513" })
 
 -- ── Telescope / Snacks picker ────────────────────────────────────────────────
 hi("TelescopeNormal", { fg = c.fg, bg = c.bg1 })
@@ -282,13 +281,13 @@ hi("CmpItemAbbrDeprecated", { fg = c.fg4, strikethrough = true })
 hi("CmpItemMenu", { fg = c.fg3 })
 hi("CmpItemKindFunction", { fg = c.light })
 hi("CmpItemKindMethod", { fg = c.light })
-hi("CmpItemKindConstructor", { fg = c.mid })
-hi("CmpItemKindClass", { fg = c.mid })
-hi("CmpItemKindInterface", { fg = c.mid })
-hi("CmpItemKindStruct", { fg = c.mid })
+hi("CmpItemKindConstructor", { fg = c.light })
+hi("CmpItemKindClass", { fg = c.light })
+hi("CmpItemKindInterface", { fg = c.light })
+hi("CmpItemKindStruct", { fg = c.light })
 hi("CmpItemKindVariable", { fg = c.fg })
-hi("CmpItemKindField", { fg = c.mid })
-hi("CmpItemKindProperty", { fg = c.mid })
+hi("CmpItemKindField", { fg = c.light })
+hi("CmpItemKindProperty", { fg = c.light })
 hi("CmpItemKindKeyword", { fg = c.coral })
 hi("CmpItemKindText", { fg = c.fg2 })
 hi("CmpItemKindSnippet", { fg = c.peach })
@@ -300,11 +299,11 @@ hi("CmpItemKindUnit", { fg = c.light })
 hi("CmpItemKindValue", { fg = c.peach })
 hi("CmpItemKindEvent", { fg = c.dark })
 hi("CmpItemKindOperator", { fg = c.fg2 })
-hi("CmpItemKindTypeParameter", { fg = c.mid })
+hi("CmpItemKindTypeParameter", { fg = c.light })
 hi("CmpItemKindColor", { fg = c.peach })
 hi("CmpItemKindFile", { fg = c.fg2 })
-hi("CmpItemKindReference", { fg = c.mid })
-hi("CmpItemKindFolder", { fg = c.mid })
+hi("CmpItemKindReference", { fg = c.light })
+hi("CmpItemKindFolder", { fg = c.light })
 
 -- ── Markdown ──────────────────────────────────────────────────────────────────
 hi("@markup.heading.1.markdown", { fg = c.coral, bold = true })
