@@ -1,0 +1,11 @@
+# Harpoon jumps — QWERTY US (1..9, 0)
+unbind '1' ; bind '1' run-shell "$HOME/.config/tmux/scripts/tmux-harpoon jump 1"
+unbind '2' ; bind '2' run-shell "$HOME/.config/tmux/scripts/tmux-harpoon jump 2"
+unbind '3' ; bind '3' run-shell "$HOME/.config/tmux/scripts/tmux-harpoon jump 3"
+unbind '4' ; bind '4' run-shell "$HOME/.config/tmux/scripts/tmux-harpoon jump 4"
+unbind '5' ; bind '5' run-shell "$HOME/.config/tmux/scripts/tmux-harpoon jump 5"
+unbind '6' ; bind '6' run-shell "$HOME/.config/tmux/scripts/tmux-harpoon jump 6"
+unbind '7' ; bind '7' run-shell "$HOME/.config/tmux/scripts/tmux-harpoon jump 7"
+unbind '8' ; bind '8' run-shell "$HOME/.config/tmux/scripts/tmux-harpoon jump 8"
+unbind '9' ; bind '9' run-shell "$HOME/.config/tmux/scripts/tmux-harpoon jump 9"
+unbind '0' ; bind '0' run-shell "$HOME/.config/tmux/scripts/tmux-harpoon jump 10"

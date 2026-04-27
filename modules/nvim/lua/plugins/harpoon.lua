@@ -43,18 +43,14 @@ return {
 			harpoon.ui:toggle_quick_menu(harpoon:list())
 		end)
 
-		vim.keymap.set("n", "<leader>&", function()
-			harpoon:list():select(1)
-		end)
-		vim.keymap.set("n", "<leader>é", function()
-			harpoon:list():select(2)
-		end)
-		vim.keymap.set("n", '<leader>"', function()
-			harpoon:list():select(3)
-		end)
-		vim.keymap.set("n", "<leader>'", function()
-			harpoon:list():select(4)
-		end)
+		local layout_keys = (vim.env.KB_LAYOUT or "qwerty") == "azerty"
+			and { "&", "é", '"', "'" }
+			or  { "1", "2", "3", "4" }
+		for i, k in ipairs(layout_keys) do
+			vim.keymap.set("n", "<leader>" .. k, function()
+				harpoon:list():select(i)
+			end)
+		end
 
 		-- vim.keymap.set("n", "<Tab>", function()
 		-- 	harpoon:list():next()

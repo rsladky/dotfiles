@@ -1,0 +1,11 @@
+# Harpoon jumps — AZERTY (& é " ' ( § è ! ç à)
+unbind '&' ; bind '&' run-shell "$HOME/.config/tmux/scripts/tmux-harpoon jump 1"
+unbind 'é' ; bind 'é' run-shell "$HOME/.config/tmux/scripts/tmux-harpoon jump 2"
+unbind '"' ; bind '"' run-shell "$HOME/.config/tmux/scripts/tmux-harpoon jump 3"
+unbind "'" ; bind "'" run-shell "$HOME/.config/tmux/scripts/tmux-harpoon jump 4"
+unbind '(' ; bind '(' run-shell "$HOME/.config/tmux/scripts/tmux-harpoon jump 5"
+unbind '§' ; bind '§' run-shell "$HOME/.config/tmux/scripts/tmux-harpoon jump 6"
+unbind 'è' ; bind 'è' run-shell "$HOME/.config/tmux/scripts/tmux-harpoon jump 7"
+unbind '!' ; bind '!' run-shell "$HOME/.config/tmux/scripts/tmux-harpoon jump 8"
+unbind 'ç' ; bind 'ç' run-shell "$HOME/.config/tmux/scripts/tmux-harpoon jump 9"
+unbind 'à' ; bind 'à' run-shell "$HOME/.config/tmux/scripts/tmux-harpoon jump 10"
