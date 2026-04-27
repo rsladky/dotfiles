@@ -60,7 +60,7 @@ keybind = cmd+j=text:\x1bj
 keybind = cmd+k=text:\x1bk
 
 # Same bindings via Ctrl (Ghostty intercepts before shell sees them)
-keybind = ctrl+d=text:\x1bd
+# ctrl+d intentionally omitted — handled by tmux (pass-through in nvim)
 keybind = ctrl+shift+d=text:\x1bD
 keybind = ctrl+t=text:\x1bt
 keybind = ctrl+w=text:\x1bw
