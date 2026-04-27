@@ -58,11 +58,16 @@ keybind = cmd+t=text:\x1bt
 keybind = cmd+w=text:\x1bw
 keybind = cmd+j=text:\x1bj
 keybind = cmd+k=text:\x1bk
+
+# Same bindings via Ctrl (Ghostty intercepts before shell sees them)
+keybind = ctrl+d=text:\x1bd
+keybind = ctrl+shift+d=text:\x1bD
+keybind = ctrl+t=text:\x1bt
+keybind = ctrl+w=text:\x1bw
 keybind = cmd+shift+[=unbind
 keybind = cmd+shift+]=unbind
 
-# AZERTY window switching: Cmd + physical number row → Meta+1..0
-# physical: matches by key position regardless of keyboard layout
+# Window switching: Cmd/Ctrl + physical number row → Meta+1..0
 keybind = cmd+digit_1=text:\x1b1
 keybind = cmd+digit_2=text:\x1b2
 keybind = cmd+digit_3=text:\x1b3
@@ -73,6 +78,16 @@ keybind = cmd+digit_7=text:\x1b7
 keybind = cmd+digit_8=text:\x1b8
 keybind = cmd+digit_9=text:\x1b9
 keybind = cmd+digit_0=text:\x1b0
+keybind = ctrl+digit_1=text:\x1b1
+keybind = ctrl+digit_2=text:\x1b2
+keybind = ctrl+digit_3=text:\x1b3
+keybind = ctrl+digit_4=text:\x1b4
+keybind = ctrl+digit_5=text:\x1b5
+keybind = ctrl+digit_6=text:\x1b6
+keybind = ctrl+digit_7=text:\x1b7
+keybind = ctrl+digit_8=text:\x1b8
+keybind = ctrl+digit_9=text:\x1b9
+keybind = ctrl+digit_0=text:\x1b0
 
 # macOS
 macos-option-as-alt = left
