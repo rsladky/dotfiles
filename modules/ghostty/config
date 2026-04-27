@@ -58,7 +58,8 @@ keybind = cmd+t=text:\x1bt
 keybind = cmd+w=text:\x1bw
 keybind = cmd+j=text:\x1bj
 keybind = cmd+k=text:\x1bk
-# ctrl+k intentionally omitted — handled by tmux (pass-through in nvim for vim-tmux-navigator)
+# Ctrl+Shift+K → M-K so tmux can clear (Ctrl+K stays free for vim-tmux-navigator)
+keybind = ctrl+shift+k=text:\x1bK
 
 # Same bindings via Ctrl (Ghostty intercepts before shell sees them)
 # ctrl+d intentionally omitted — handled by tmux (pass-through in nvim)
