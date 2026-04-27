@@ -1,0 +1,78 @@
+# Ghostty config - Vesper theme, tmux-first
+
+# Shell / command
+command = /opt/homebrew/bin/tmux new-session -A -s main
+shell-integration = zsh
+
+# Font
+font-family = JetBrainsMono Nerd Font
+font-size = 14
+
+# Cursor
+cursor-style = block
+cursor-style-blink = true
+mouse-hide-while-typing = true
+
+# Window - let AeroSpace manage decorations
+window-decoration = false
+macos-titlebar-style = hidden
+window-padding-x = 6
+window-padding-y = 6
+
+# Colors (Cendre)
+background = #000000
+foreground = #ffffff
+cursor-color = #ffffff
+
+# ANSI 0-7
+palette = 0=#000000
+palette = 1=#ff5555
+palette = 2=#888888
+palette = 3=#ffc799
+palette = 4=#555555
+palette = 5=#c8c8c8
+palette = 6=#888888
+palette = 7=#cccccc
+
+# ANSI 8-15 (bright)
+palette = 8=#333333
+palette = 9=#ff5555
+palette = 10=#c8c8c8
+palette = 11=#ffc799
+palette = 12=#888888
+palette = 13=#c8c8c8
+palette = 14=#888888
+palette = 15=#ffffff
+
+# Selection
+selection-background = #222222
+selection-foreground = #ffffff
+
+# Remap Cmd+A to send Alt+A (so tmux sees it as M-a prefix)
+keybind = cmd+a=text:\x1ba
+
+# Remap Cmd+d/D/t/w → Meta sequences for tmux (no prefix needed)
+keybind = cmd+d=text:\x1bd
+keybind = cmd+shift+d=text:\x1bD
+keybind = cmd+t=text:\x1bt
+keybind = cmd+w=text:\x1bw
+keybind = cmd+j=text:\x1bj
+keybind = cmd+k=text:\x1bk
+keybind = cmd+shift+[=unbind
+keybind = cmd+shift+]=unbind
+
+# AZERTY window switching: Cmd + physical number row → Meta+1..0
+# physical: matches by key position regardless of keyboard layout
+keybind = cmd+digit_1=text:\x1b1
+keybind = cmd+digit_2=text:\x1b2
+keybind = cmd+digit_3=text:\x1b3
+keybind = cmd+digit_4=text:\x1b4
+keybind = cmd+digit_5=text:\x1b5
+keybind = cmd+digit_6=text:\x1b6
+keybind = cmd+digit_7=text:\x1b7
+keybind = cmd+digit_8=text:\x1b8
+keybind = cmd+digit_9=text:\x1b9
+keybind = cmd+digit_0=text:\x1b0
+
+# macOS
+macos-option-as-alt = left
