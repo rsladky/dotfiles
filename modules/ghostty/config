@@ -64,7 +64,7 @@ keybind = cmd+k=text:\x1bk
 # ctrl+d intentionally omitted — handled by tmux (pass-through in nvim)
 keybind = ctrl+shift+d=text:\x1bD
 keybind = ctrl+t=text:\x1bt
-keybind = ctrl+w=text:\x1bw
+# ctrl+w intentionally omitted — handled by tmux (pass-through in nvim for Ctrl+w window commands)
 keybind = cmd+shift+[=unbind
 keybind = cmd+shift+]=unbind
 
