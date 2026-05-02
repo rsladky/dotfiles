@@ -50,7 +50,27 @@ pwsh $HOME\dotfiles\bootstrap.ps1 -DryRun
 ### 6. Restart wezterm
 
 Open wezterm. PowerShell 7 should launch with starship prompt, zoxide (`z <dir>`),
-and fzf bindings (`Ctrl+R` history, `Ctrl+T` files).
+and fzf bindings (`Ctrl+R` history, `Ctrl+T` files). Theme is **Cendre**
+(black/white + red accent), inlined in `wezterm.lua` — no extra download.
+
+### Multiplexer (tmux equivalent)
+
+Wezterm's built-in panes/tabs/workspaces replace tmux. Leader = **Ctrl+a**.
+
+| Action              | Key                          |
+|---------------------|------------------------------|
+| split right         | `Alt+d` *or* `Ctrl+a d`      |
+| split down          | `Alt+Shift+D` *or* `Ctrl+a D`|
+| new tab             | `Alt+t` *or* `Ctrl+a t`      |
+| close pane          | `Alt+w` *or* `Ctrl+a w/x`    |
+| clear + scrollback  | `Alt+k`                      |
+| pane nav (vim-aware)| `Ctrl+h/j/k/l`               |
+| activate tab N      | `Alt+1` … `Alt+0`            |
+| workspace picker    | `Ctrl+a f`                   |
+| next workspace      | `Ctrl+a s`                   |
+| resize pane         | `Ctrl+a` then arrows         |
+| copy mode           | `Ctrl+a v`                   |
+| reload config       | `Ctrl+a r`                   |
 
 ### Re-applying after edits
 
