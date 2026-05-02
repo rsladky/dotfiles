@@ -18,6 +18,7 @@ require("lazy").setup({
 	require("plugins.snacks"), -- replaces: telescope, neotree, alpha, indent-blankline, fidget, vim-rhubarb, image.nvim
 	require("plugins.colortheme"),
 	require("plugins.mini"),
+	require("plugins.smear-cursor"),
 	require("plugins.treesitter"),
 	require("plugins.lsp"),
 	require("plugins.autocompletion"),
@@ -32,6 +33,9 @@ require("lazy").setup({
 	require("plugins.opencode"),
 	require("plugins.vim-tmux-navigator"),
 	require("plugins.molten"),
+	require("plugins.tabout"),
+	require("plugins.flash"),
+	require("plugins.yazi"),
 	-- require("plugins.alpha"),           -- REPLACED by snacks.dashboard
 	-- require("plugins.indent-blankline"),-- REPLACED by snacks.indent
 	-- require("plugins.neotree"),         -- REPLACED by snacks.explorer

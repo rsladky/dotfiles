@@ -1,0 +1,119 @@
+# Cendre — black/white + red accent, matches ghostty/wezterm/zsh
+# https://yazi-rs.github.io/docs/configuration/theme
+
+[manager]
+cwd = { fg = "#ffffff" }
+
+hovered         = { fg = "#000000", bg = "#ffffff" }
+preview_hovered = { underline = true }
+
+find_keyword  = { fg = "#ff5555", bold = true }
+find_position = { fg = "#ffc799", bg = "reset", bold = true }
+
+marker_copied   = { fg = "#ffc799", bg = "#ffc799" }
+marker_cut      = { fg = "#ff5555", bg = "#ff5555" }
+marker_marked   = { fg = "#c8c8c8", bg = "#c8c8c8" }
+marker_selected = { fg = "#ffffff", bg = "#ffffff" }
+
+tab_active   = { fg = "#000000", bg = "#ffffff" }
+tab_inactive = { fg = "#ffffff", bg = "#101010" }
+tab_width    = 1
+
+count_copied   = { fg = "#000000", bg = "#ffc799" }
+count_cut      = { fg = "#ffffff", bg = "#ff5555" }
+count_selected = { fg = "#000000", bg = "#ffffff" }
+
+border_symbol = "│"
+border_style  = { fg = "#555555" }
+
+syntect_theme = ""
+
+[mode]
+normal_main = { fg = "#000000", bg = "#ffffff", bold = true }
+normal_alt  = { fg = "#ffffff", bg = "#555555" }
+
+select_main = { fg = "#000000", bg = "#ffc799", bold = true }
+select_alt  = { fg = "#ffc799", bg = "#555555" }
+
+unset_main = { fg = "#ffffff", bg = "#ff5555", bold = true }
+unset_alt  = { fg = "#ff5555", bg = "#555555" }
+
+[status]
+separator_open  = ""
+separator_close = ""
+separator_style = { fg = "#555555", bg = "#555555" }
+
+progress_label  = { fg = "#ffffff", bold = true }
+progress_normal = { fg = "#ffffff", bg = "#555555" }
+progress_error  = { fg = "#ff5555", bg = "#555555" }
+
+permissions_t = { fg = "#c8c8c8" }
+permissions_r = { fg = "#ffc799" }
+permissions_w = { fg = "#ff5555" }
+permissions_x = { fg = "#888888" }
+permissions_s = { fg = "#555555" }
+
+[select]
+border   = { fg = "#ffffff" }
+active   = { fg = "#ff5555" }
+inactive = {}
+
+[input]
+border   = { fg = "#ffffff" }
+title    = {}
+value    = {}
+selected = { reversed = true }
+
+[confirm]
+border  = { fg = "#ffffff" }
+title   = { fg = "#ff5555" }
+content = {}
+list    = {}
+btn_yes = { reversed = true }
+btn_no  = {}
+
+[pick]
+border   = { fg = "#ffffff" }
+active   = { fg = "#ffc799", bold = true }
+inactive = {}
+
+[tasks]
+border  = { fg = "#ffffff" }
+title   = {}
+hovered = { fg = "#ff5555", underline = true }
+
+[which]
+mask            = { bg = "#101010" }
+cand            = { fg = "#ffc799" }
+rest            = { fg = "#888888" }
+desc            = { fg = "#ff5555" }
+separator       = "  "
+separator_style = { fg = "#555555" }
+
+[help]
+on      = { fg = "#ffc799" }
+run     = { fg = "#ff5555" }
+desc    = { fg = "#c8c8c8" }
+hovered = { bg = "#222222", bold = true }
+footer  = { fg = "#ffffff", bg = "#101010" }
+
+[notify]
+title_info  = { fg = "#c8c8c8" }
+title_warn  = { fg = "#ffc799" }
+title_error = { fg = "#ff5555" }
+
+[filetype]
+rules = [
+  { mime = "image/*",  fg = "#ffc799" },
+  { mime = "video/*",  fg = "#ffc799" },
+  { mime = "audio/*",  fg = "#ffc799" },
+
+  { mime = "application/json",                                        fg = "#c8c8c8" },
+  { mime = "application/x-{tar,bzip*,7z-compressed,xz,rar,zip}",      fg = "#ff5555" },
+  { mime = "application/{gzip,zstd}",                                 fg = "#ff5555" },
+
+  { name = "*.md",   fg = "#ffffff" },
+  { name = "*/",     fg = "#ffffff", bold = true },
+
+  { name = "*",      fg = "#cccccc" },
+]

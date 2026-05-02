@@ -42,8 +42,8 @@ vim.keymap.set("n", "<Left>", ":vertical resize -2<CR>", opts)
 vim.keymap.set("n", "<Right>", ":vertical resize +2<CR>", opts)
 
 -- Indent
-vim.keymap.set("n", "<Tab>", ">>", opts)
-vim.keymap.set("n", "<S-Tab>", "<<", opts)
+-- vim.keymap.set("n", "<Tab>", ">>", opts)
+-- vim.keymap.set("n", "<S-Tab>", "<<", opts)
 
 -- Add line below without entering insert mode
 vim.keymap.set("n", "<CR>", function()

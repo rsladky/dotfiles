@@ -31,6 +31,7 @@ link "$REPO/modules/fish"                     "$HOME/.config/fish"
 link "$REPO/modules/opencode"                 "$HOME/.config/opencode"
 link "$REPO/modules/starship/starship.toml"   "$HOME/.config/starship.toml"
 link "$REPO/modules/htop"                     "$HOME/.config/htop"
+link "$REPO/modules/yazi"                     "$HOME/.config/yazi"
 link "$REPO/modules/git/ignore"               "$HOME/.config/git/ignore"
 
 # ── mac-only ────────────────────────────────────────────────────────────────

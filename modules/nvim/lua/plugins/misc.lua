@@ -37,4 +37,7 @@ return {
 			require("colorizer").setup()
 		end,
 	},
+	{
+		"j-hui/fidget.nvim",
+	},
 }
