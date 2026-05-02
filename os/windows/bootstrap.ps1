@@ -6,7 +6,7 @@
 param([switch]$DryRun)
 
 $ErrorActionPreference = 'Stop'
-$repo = Split-Path -Parent (Split-Path -Parent $PSCommandPath)
+$repo = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 
 function Copy-Config {
     param([string]$Src, [string]$Dst)
